@@ -1,8 +1,29 @@
 #include <iostream>
-int main(){
-size_t m=0;
-size_t n=0;
-std::cin>>m>>n;
-std::cout<<m<<" "<<n;
-std::cout<<'\n';
+int** matrix(size_t m, size_t n);
+void clear(int** t, size_t m, size_t n);
+void enter(int** t, size_t m, size_t n) {
+    for (size_t i = 0; i < m; i += 1) {
+        for (size_t j = 0; j < n; j += 1) {
+            std::cin >> t[i][j];
+        }
+    }
+}
+void out(const int* const* t, size_t m, size_t n) {
+    for (size_t i = 0; i < m; i += 1) {
+        std::cout << t[i][0];
+        for (size_t j = 1; j < n; j += 1) {
+            std::cout << " " << t[i][j];
+        }
+        std::cout << "\n";
+    }
+}
+int main() {
+    size_t m = 0;
+    size_t n = 0;
+    int** t = matrix(m, n);
+    std::cin >> m >> n;
+    std::cout << m << " " << n;
+    std::cout << '\n';
+    clear(t, m, n);
+
 }
