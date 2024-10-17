@@ -4,6 +4,7 @@ void clear(int** t, size_t m){
   for(size_t i=0;i<m;i+=1){
     delete[] t[i];
   }
+  delete[] t;
 }
 int** matrix(size_t m, size_t n){
   int ** t=new int*[m];
@@ -35,4 +36,3 @@ void out(const int* const* t, size_t m, size_t n) {
     std::cout << "\n";
   }
 }
-
