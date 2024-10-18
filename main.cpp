@@ -18,10 +18,6 @@ int main() {
     return 1;
   }
   enter(t,m,n);
-  if (!std::cin){
-    clear(t,m);
-    return 1;
-  }
   out(t, m, n);
   std::cout <<'\n';
   clear(t, m);

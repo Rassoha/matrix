@@ -24,6 +24,10 @@ void enter(int** t, size_t m, size_t n) {
   for (size_t i = 0; i < m; i += 1) {
     for (size_t j = 0; j < n; j += 1) {
       std::cin >> t[i][j];
+      if (!std::cin){
+        std::cerr<< "ENTER NOT A NUBMER!!!";
+        break;
+      }
     }
   }
 }
